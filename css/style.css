@@ -1,0 +1,181 @@
+/* 1. RESET & CSS VARIABLES */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Colors */
+  /* Primary */
+  --color-prim-red: hsl(0, 78%, 62%);
+  --color-prim-cyan: hsl(180, 62%, 55%);
+  --color-prim-orange: hsl(34, 97%, 64%);
+  --color-prim-blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --color-neut-vdblue: hsl(234, 12%, 34%);
+  --color-neut-grblue: hsl(212, 6%, 44%);
+  --color-neut-white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* 2. PAGE HEADER (Equivalent to .container & .title) */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 50px;
+  max-width: 500px;
+}
+
+.page-header__title {
+  font-size: 1.3rem;
+  color: var(--color-neut-grblue);
+  font-weight: 200;
+}
+
+.page-header__title--highlight {
+  font-weight: 700;
+  color: var(--color-neut-vdblue);
+}
+
+.page-header__description {
+  font-size: 1rem;
+  margin: 20px 0 30px 0;
+  color: var(--color-neut-grblue);
+}
+
+/* 3. GRID CONTAINER */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* 4. FEATURE CARD (BLOCK) */
+.feature-card {
+  text-align: start;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card__title {
+  font-weight: 500;
+  color: var(--color-neut-vdblue);
+  font-size: 1.2rem;
+  margin: 20px 0 30px 20px;
+}
+
+.feature-card__description {
+  color: var(--color-neut-vdblue);
+  margin-left: 20px;
+  width: 80%;
+}
+
+.feature-card__icon {
+  align-self: flex-end;
+  justify-self: end;
+  margin-top: 15px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+/* 5. CARD MODIFIERS (BORDERS) */
+.feature-card--cyan {
+  border-top: 5px solid var(--color-prim-cyan);
+}
+
+.feature-card--red {
+  border-top: 5px solid var(--color-prim-red);
+}
+
+.feature-card--orange {
+  border-top: 5px solid var(--color-prim-orange);
+}
+
+.feature-card--blue {
+  border-top: 5px solid var(--color-prim-blue);
+}
+
+/* 6. MEDIA QUERIES (DESKTOP LAYOUT) */
+@media (min-width: 1440px) {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .page-header__title {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding-bottom: 30px;
+    width: 90%;
+  }
+
+  /* Grid Positions according to BEM modifiers */
+  .feature-card--cyan {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .feature-card--red {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .feature-card--orange {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .feature-card--blue {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .feature-card__icon {
+    margin-top: 15px;
+  }
+
+  .feature-card__description {
+    width: 80%;
+  }
+}
+
+/* 7. PAGE FOOTER */
+.page-footer {
+  margin-top: 150px;
+}
+
+/* Attribution styles kept clean */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
