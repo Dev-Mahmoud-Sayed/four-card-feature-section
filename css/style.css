@@ -28,6 +28,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  width: 75%;
 }
 
 /* 2. PAGE HEADER (Equivalent to .container & .title) */
@@ -39,7 +40,7 @@ body {
   text-align: center;
   padding: 20px 20px;
   margin-top: 50px;
-  max-width: 500px;
+  max-width: 625px;
 }
 
 .page-header__title {
