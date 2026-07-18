@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section
 
-Go to website ➡ https://github.com/Dev-Mahmoud-Sayed/four-card-feature-section.git
+Go to website ➡ https://dev-mahmoud-sayed.github.io/four-card-feature-section/
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
 
